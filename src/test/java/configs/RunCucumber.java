@@ -15,6 +15,5 @@ import org.junit.runner.RunWith;
 public class RunCucumber {
 
     public RunCucumber() {
-
     }
 }
