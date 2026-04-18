@@ -7,10 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.*;
 
-public class HomePage implements MainPage{
-
-    WebDriver driver = WebDriverManager.getDriver();
-    String url = "https://www.demoblaze.com/index.html";
+public class HomePage {
 
     public static Map<String, By> homeElements = new HashMap<>();
 
@@ -25,41 +22,4 @@ public class HomePage implements MainPage{
         homeElements.put("sign_up", By.id("signin2"));
     }
 
-    @Override
-    public void startBrowser() {
-        driver.get(url);
-    }
-
-    @Override
-    public void validateAllElements() {
-
-        homeElements.forEach((nombreElemento,elemento)->{
-                try{
-                    driver.findElement(homeElements.get(nombreElemento)).isDisplayed();
-                    System.out.println("Elemento "+nombreElemento+" es visible");
-                } catch (RuntimeException e) {
-                    throw new RuntimeException("El elemento '" + nombreElemento + "' no es visible");
-                }
-            });
-    }
-
-    public void elementsAreVisiblesByEnum() {
-        List<HomeLocators> elementos = new ArrayList<>(Arrays.asList(HomeLocators.values()));
-
-        for (HomeLocators element : elementos) {
-            try{
-                driver.findElement(element.get()).isDisplayed();
-                System.out.println(element.name() + " es visible");
-            }catch (Exception e){
-                throw new RuntimeException(
-                        "El elemento '" + element + "' no es visible"
-                );
-            }
-        }
-    }
-
-    @Override
-    public void makeClick(String elementName){
-        driver.findElement(homeElements.get(elementName)).click();
-    }
 }

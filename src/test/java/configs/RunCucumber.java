@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src\\test\\resources\\features",
         glue = "steps",
-        tags = "@first",
+        tags = "@contact",
         publish = true
 )
 public class RunCucumber {

@@ -11,4 +11,5 @@ Feature: Home
     Given start browser in home
     When i click on "contact" in home
     Then i must see the contact window
+    #And i click on "close_button" in contact window
 

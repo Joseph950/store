@@ -1,5 +1,6 @@
 package steps;
 
+import Utils.Utility;
 import configs.WebDriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,21 +12,21 @@ import pages.HomePage;
 
 public class HomeSteps{
 
-    HomePage homePage = new HomePage();
+    Utility utility = new Utility();
 
     @Given("start browser in home")
     public void startInHome() {
-        homePage.startBrowser();
+        utility.startBrowser();
     }
 
     @Then("i must see the home page")
     public void homeIsVisible() {
-        homePage.validateAllElements();
+        utility.validateAllElements(HomePage.homeElements);
     }
 
     @When("i click on {string} in home")
     public void i_click_on_contact(String button) {
-        homePage.makeClick(button);
+        utility.makeClick(button,HomePage.homeElements);
     }
 
 }
