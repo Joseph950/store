@@ -29,12 +29,22 @@ public class Utility {
 
         pageElement.forEach((nombreElemento,elemento)->{
             try{
-                Thread.sleep(1000);
+                Thread.sleep(500);
                 driver.findElement(pageElement.get(nombreElemento)).isDisplayed();
                 System.out.println("Elemento "+nombreElemento+" es visible");
             } catch (InterruptedException e) {
                 throw new RuntimeException("El elemento '" + nombreElemento + "' no es visible");
             }
         });
+    }
+
+    public void encontrarElemento() {
+        try {
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//label[@for='recipient-name']"));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

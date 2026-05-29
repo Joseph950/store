@@ -29,4 +29,9 @@ public class HomeSteps{
         utility.makeClick(button,HomePage.homeElements);
     }
 
+    @When("Encontrar elemento")
+    public void find() {
+        utility.encontrarElemento();
+    }
+
 }
