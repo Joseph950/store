@@ -15,7 +15,7 @@ public class GenerateReport {
         File reportOutputDirectory = new File("target/advanced-report");
 
         List<String> jsonFiles = new ArrayList<>();
-        jsonFiles.add("targe/cucumber-reports/cucumber.json");
+        jsonFiles.add("target/cucumber-reports/cucumber.json");
 
         Configuration configuration =
                 new Configuration(reportOutputDirectory,

@@ -19,8 +19,7 @@ public class HomePage {
         homeElements.put("about_us", By.xpath("//a[@data-target='#videoModal']"));
         homeElements.put("cart", By.id("cartur"));
         homeElements.put("log_in", By.id("login2"));
-        homeElements.put("sign_up", By.id("sig"));
-        //homeElements.put("sign_up", By.id("signin2"));
+        homeElements.put("sign_up", By.id("signin2"));
     }
 
 }
