@@ -23,6 +23,7 @@ public class Utility {
 
     public void startBrowser() {
         driver.get(url);
+        driver.manage().window().maximize();
     }
 
     public void validateAllElements(Map<String, By> pageElement) {

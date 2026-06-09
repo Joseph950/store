@@ -13,7 +13,7 @@ import reports.GenerateReport;
         features = "src\\test\\resources\\features",
         glue = "steps",
         plugin = {
-                "html",
+                "pretty",
                 "html:target/cucumber-reports/index.html",
                 "json:target/cucumber-reports/cucumber.json",
                 "junit:target/cucumber-reports/cucumber.xml"
